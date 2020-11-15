@@ -18,7 +18,7 @@ public class EcodataTiming {
     @Scheduled(cron = "0 0 * * * ?")
     public void mysqlToHbase() throws Exception{
         Long maxId = ecodataMapper.maxDatanumId();
-        Index index = ecodataMapper.get();
+        Index index = ecodataMapper.getIndex();
         //先插入mysql
         Index newIndex = new Index();
         newIndex.setStart(index.getEnd());
