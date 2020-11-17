@@ -23,9 +23,9 @@ public interface EcodataMapper {
     @Select("select max(e.datanum_id) from  ecodata e")
     Long maxDatanumId();
 
-    @Select("select * from `index` i ORDER BY id DESC limit 1")
+    @Select("select * from `Index` i ORDER BY id DESC limit 1")
     public Index  getIndex();
 
-    @Insert("insert into index values(#{index.start},#{index.end})")
+    @Insert("INSERT INTO `Index` (start,end) VALUES (#{start},#{end})")
     void insert(Index index);
 }

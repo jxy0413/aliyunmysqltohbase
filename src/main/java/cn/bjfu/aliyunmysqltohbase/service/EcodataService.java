@@ -16,7 +16,7 @@ public class EcodataService {
     @Autowired
     private EcodataMapper ecodataMapper;
     public void mysqlToHbase() throws Exception {
-        for(long i=63767064;i<=84312963L;i++){
+        for(long i=84312963;i<=85052831L;i++){
             Ecodata ecodata = ecodataMapper.get(i);
             if(ecodata!=null){
                 System.out.println(i);
